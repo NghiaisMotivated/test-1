@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+    text-decoration: none;
+}
+
+
+/* Variables */
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.navbar-brand:hover {
+    text-decoration: none;
+}
+
+.navbar-slogan {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.nav-link {
+    position: relative;
+    /* set the position to relative */
+    margin-left: 500px;
+}
+
+.project img {
+    width: 650px;
+    height: 320px;
+}
+
+.show-case {
+    margin: 0 auto;
+    /* set left and right margins to "auto" */
+    width: 50%;
+    /* set the width of the block to 50% of the parent container */
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.project {
+    margin-top: 100px;
+}
+
+.project a {
+    color: black;
+}
+
+.project a:hover {
+    text-decoration: none;
+}
+
+.project a img {
+    border-radius: 10px;
+}
+
+.project p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.information ul {
+    display: flex;
+}
+
+.information ul li {
+    position: relative;
+    display: block;
+    margin-right: 20px;
+    white-space: nowrap;
+    left: -30;
+}
+
+.information ul li i {
+    margin-right: 5px;
+}
+
+.information ul li {
+    font-size: 15px;
+}
+
+.information ul li a {
+    font-size: 14px;
+}
+
+.information ul li a:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar-slogan {
+        white-space: nowrap;
+    }
+
+    .navbar-toggler {
+        flex-wrap: nowrap;
+        display: block;
+    }
+
+
+    .nav-link {
+        position: relative;
+        /* set the position to relative */
+        margin-left: -00px;
+    }
+
+    .projects {
+        margin-top: -80px;
+        position: relative;
+        left: -100;
+    }
+
+    .project {
+        width: 420px;
+        height: 620px;
+    }
+
+    .project h2 {
+        text-align: center;
+    }
+
+    .project a img {
+        width: 420px;
+        height: 250px;
+    }
+
+    .information ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navbar-toggler {
+        flex-wrap: nowrap;
+        display: block;
+        font-size: 10px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .navbar-toggler {
+        flex-wrap: nowrap;
+        display: block;
+        font-size: 10px;
+    }
+
+    .project h2 {
+        margin-top: 150px;
+    }
+
+    .container.show-case.projects {
+        margin-left: 90px;
+    }
+
+   .container.show-case.projects img{
+    width: 395px;
+   }
+
+   .container.show-case.projects p {
+    width: 90%;
+   }
+}

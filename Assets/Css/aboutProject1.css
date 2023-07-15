@@ -1,0 +1,159 @@
+.project-1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.project-1 h1 {
+    text-align: center;
+}
+
+.overview {
+    margin: 0 auto;
+    /* set left and right margins to "auto" */
+    width: 50%;
+}
+
+.overview h1,
+.case-description h1,
+.entity-relationship-diagram h1,
+.database-normalization h1 {
+    margin-top: 40px;
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+.overview ul {
+    position: relative;
+    margin-left: -30px;
+    list-style: none;
+}
+
+.overview ul li {
+    font-size: 17px;
+}
+
+.overview ul li a:hover {
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.general p,
+.case-description p,
+.entity-relationship-diagram p,
+.database-normalization p,
+.conclusion p {
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.general ol li,
+.entity-relationship-diagram ol li,
+.create-trigger ol li {
+    list-style-type: decimal;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.entity-relationship-diagram img,
+.database-normalization img {
+    margin-top: 20px;
+}
+
+.database-normalization ul li {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.information ul li {
+    position: relative;
+    display: block;
+    margin-right: 20px;
+    white-space: nowrap;
+    left: -45;
+    top: -90
+}
+
+.information ul li i {
+    margin-right: 5px;
+}
+
+.information ul li {
+    font-size: 15px;
+}
+
+.information ul li a {
+    font-size: 14px;
+}
+
+.information ul li a:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar-slogan {
+        white-space: nowrap;
+    }
+
+    .navbar-toggler {
+        flex-wrap: nowrap;
+        display: block;
+        font-size: 20px;
+    }
+
+
+    .nav-link {
+        position: relative;
+        /* set the position to relative */
+        margin-left: -00px;
+    }
+
+    .overview {
+        width: 100%;
+    }
+
+    .overview ul {
+        padding-left: 50px;
+    }
+
+    .overview h1 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .overview p {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .overview img {
+        width: 100%;
+    }
+
+    .container.show-case.projects .project {
+        height: 0px;
+        margin-top: 150px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .overview {
+        width: 100%;
+    }
+
+    .project-1 img {
+        margin-left: 5px;
+    }
+
+    .information ul {
+        width: 10%;
+        margin-left: 29px;
+        margin-top: 20px;
+    }
+    .navbar-toggler {
+        flex-wrap: nowrap;
+        display: block;
+        font-size: 10px;
+    }
+}

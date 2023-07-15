@@ -1,0 +1,334 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Assets/Library/bootstrap/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/Css/index.css">
+    <link rel="stylesheet" href="Assets/Css/aboutProject1.css">
+    <style>
+        .project-2 {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .project-2 h1 {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 400px) {
+            .overview {
+                width: 100%;
+            }
+
+            .project-2 img {
+                margin-left: 5px;
+            }
+
+            .information ul {
+                width: 10%;
+                margin-left: 29px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <a class="navbar-slogan" aria-current="page" href="index.html">On the journey to become a real Data Analyst
+                !</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aboutme.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="project-2">
+        <h1>Project 2: ###</h1>
+        <img src="Assets/img/paul-emile-boucher-sifu-screenshot-h3-13.jpg" alt="...">
+    </div>
+
+    <div class="overview">
+        <ul>
+            <li><b>Github: </b><a href="">link</a></li>
+            <li style="margin-top: 30px"><b>Data Model file: </b><a href="">link</a></li>
+        </ul>
+
+        <h1>Overview</h1>
+
+        <div class="general">
+            <p class="project-overview">Circle K is a global convenience store and gas station chain with over 10,000
+                locations in North America, Europe, Asia, and the Middle East. The company offers a wide range of
+                products and services that cater to the convenience of customers, including fuel, snacks, beverages,
+                cigarettes, lottery tickets, money orders, prepaid cards, car washes, and ATM machines. With its
+                commitment to sustainability and support for local communities, Circle K has become a well-known brand
+                that provides accessible and convenient services to customers worldwide. <br><br> Due to its popularity
+                and convenience, Circle handles hundred or even thousand of transactions per day. Circle K must find a
+                way to store all those transactions to be able to manage the stores more efficiently as well as grow
+                more sustainably. Specifically, once Circle K stores data effectively, it can utilize and analyze those
+                data with the purpose of tracking revenue, inventory, or other key performance metrics. Therefore, it is
+                necessary for Circle K to have a good operational database. This is the reason why this project will
+                focus on designing an operational database for managing transactions of Circle K.
+            </p>
+
+            <br>
+
+            <p>In general, this project includes 4 main parts:</p>
+            <ol>
+                <li style="margin-top: 30px">Case description</li>
+                <li>Design Entity Relationship diagram (ERD)</li>
+                <li>Database normalization</li>
+                <li style="margin-bottom: 30px;">Create trigger to catch the event of insertion</li>
+            </ol>
+        </div>
+
+
+        <div class="case-description">
+            <h1>Case description</h1>
+
+            <p>Circle K offers a wide range of products with various designs and origins, including bottled drinks,
+                beer, wine, or ready-to-drink beverages such as coffee, lemon tea…; and many types of cakes, snacks, and
+                even fast food are fully served here.
+            </p>
+            <br>
+            <p>
+                Depending on the store size and location, the number of POS machines may differ, usually ranging from 2
+                to 3 machines. Each POS machine has its own unique identification code.
+            </p>
+            <br>
+            <p>To create the most convenient conditions for shopping, customers who come to buy products at Circle K
+                will have many choices of payment methods, such as: cash, ATM, Momo etc
+            </p>
+            <br>
+            <p>
+                For each transaction, customers can buy multiple products at the same time. When customers make payments
+                at the counter, after the staff scans the price of each product, they will ask customers if they are a
+                member of Circle K to accumulate points. For customers who are not yet members, they will not earn
+                points, and these transactions will not have customer information. For Circle K members, to earn points,
+                they will be asked by staff to open the CK Club app on their phone and scan the “My ID” code. After
+                earning points and making payments, the CK Club app will automatically save the transaction just made in
+                the app and update the total amount spent from the first purchase at Circle K until the current time of
+                the customer. Specifically, as a Circle K member, based on the total amount spent, customers are divided
+                into different levels in the total of 4 levels currently in the store’s system, including Silver, Gold,
+                Platinum, Diamond. Silver level is the lowest level, when a member signs up for the first time, the
+                customer is in the default Silver status. To reach a higher level, customers need to spend a total
+                amount of money according to each level’s regulations. For example, t o go from Silver to Gold level,
+                customers need to spend a total of 1,000,000 VND, to reach Platinum, customers need to spend a total of
+                5,000,000 VND (including 1,000,000 VND to go from Silver to Gold). The system records the information of
+                members such as name, date of birth, phone number in each of their transactions. In addition, once
+                customers reach the highest level, Diamond, they will still be able to earn points, but will no longer
+                advance to a higher level.
+            </p>
+
+            <p>
+                Circle K regularly provides promotional programs to customers through discounts on store items. Each
+                program has a start and end date, and for simplicity, the hypothetical project only includes two main
+                types of promotions: percentage discounts and buy one, get one free. Sometimes a product can be eligible
+                for both types of promotions at the same time. Therefore, for each product in a transaction that is
+                eligible for a promotional discount, the database system will record which promotion was applied and how
+                much percentage was discounted.
+            </p>
+        </div>
+
+
+        <div class="entity-relationship-diagram">
+            <h1>Entity relationship diagram</h1>
+            <p>
+                Circle K Entity relationship diagram includes 13 entity types. There are two weak entity types, which
+                means the primary key of each entity type is a combination of the PK of the parent table and its
+                columns:
+            </p>
+            <ol>
+                <li style="margin-top: 30px">Transaction detail: PK is the combination of transaction_id in Transaction
+                    table and ordinal_number</li>
+                <li style="margin-bottom: 30px;">Point balance: PK is the combination of customer_id in Customer table
+                    and the update_date</li>
+            </ol>
+
+            <br>
+
+            <p>In addition, there is also a Promotion entity type, which is used to record all of the promotions of
+                Circle K. Moreover, I created a Title history entity type to record the historical positions of each
+                employee in case of needing more information relating to the employee.</p>
+
+            <br>
+
+            <p>In terms of cardinality, one thing I would like to mention is a transaction can record the information of
+                a customer if he/she is a member of Circle K. In case, the customer has not registered for membership
+                yet, the transaction can not record the information of the customer. All of that lead to the result that
+                the Transaction entity has an optional relationship with the Customer entity.</p>
+            <img src="https://haodang02.files.wordpress.com/2023/04/1-2.png" alt="">
+        </div>
+
+
+        <div class="database-normalization">
+
+            <h1>Database Normalization</h1>
+            <p>After converting business requirement into ERD, our work is not yet finished. We need to analyze the
+                tables for redundancies that can make the tables difficult to use.
+
+                <br><br>
+
+                But why redundancies can make a table difficult to use ?
+
+                Well, a good database design ensures that users can change the contents of a database without unexpected
+                side effects. It means that if a database can not reduce or eliminate the redundancies of data, it will
+                lead to the modification anomalies issue, which are unexpected side effects that occur when changing the
+                contents of a table with excessive redundancies.
+
+                <br><br>
+
+                You can check those keywords on google for more understanding because I can not explain all of that in
+                this project. It’s not my scope today dude!
+
+                <br><br>
+
+                Before normalize table, we need to convert the ERD into a relational database first, then identify all
+                of the functional dependencies of each table. Finally, using the Third Normal Form rules to normalize
+                our database.
+
+                <br><br>
+
+                Note: if you do not know what are functional dependencies, just google it. In general, by identifying
+                the functional dependencies, we can determine whether a table violates the Third Normal Form or not.
+
+
+
+            </p>
+            <ul style="margin-left: -35px;">
+                <li style="margin-top: 30px">
+                    <h2>1. ERD conversion</h2>
+                    <p>After the conversion, we can see clearly the PK and FK of each table. </p>
+                    <img src="https://haodang02.files.wordpress.com/2023/04/2-2.png" alt="">
+                </li>
+
+                <li style="margin-bottom: 30px; margin-top: 35px">
+                    <h2>2. Identify Functional dependencies (FD)</h2>
+                    <img src="https://haodang02.files.wordpress.com/2023/04/5-2.png?w=557" alt="">
+                </li>
+
+                <li style="margin-bottom: 30px;">
+                    <h2>3. Third Normal Form</h2>
+                    <p>In short, a table is in Third Normal Form if it meet those 2 rules </p>
+                    <ul style="list-style: disc; margin-left: 10px">
+                        <li style="margin-top: 50px">Each non-key column depends on all candidate keys, not on a subset
+                            of any candidate key.</li>
+                        <li style="margin-bottom: 50px;">product: category depends on sub_category, although
+                            sub_categoryis a determinant but it and category are non key columns</li>
+                    </ul>
+
+                    <p>From those two rules and based on the functional dependencies we just identify above, we can
+                        determine which table violates the Third Normal Form.</p>
+
+                    <p>There are four tables that violate the Third Normal Form: store, employee, customer, and product.
+                    </p>
+                    <ol>
+                        <li style="margin-top: 30px">store, employee, customer: city depends on zip_code, although
+                            zip_code is a determinant but it and city are non key columns</li>
+                        <li style="margin-bottom: 30px;">product: category depends on sub_category, although
+                            sub_categoryis a determinant but it and category are non key columns</li>
+                    </ol>
+                    <p>To convert those tables into tables that follow TNF, we will split those tables into smaller
+                        tables and the PK of smaller tables are those determinants but not candidate keys in the
+                        original tables</p>
+                    <img src="https://haodang02.files.wordpress.com/2023/04/3-2.png?w=1024" alt="">
+                </li>
+            </ul>
+        </div>
+
+        <div class="create-trigger ">
+            <h1>Create trigger to catch the event of inserting transaction</h1>
+            <p>I created a trigger that manages the point balance of customers based on their transaction history. The
+                trigger fires after each insert into the “Transaction” table, and performs the following actions:</p>
+            <ol>
+                <li style=" margin-top: 30px">Declares several variables to hold information about the customer,
+                    their current rank, the next rank they could achieve, and the total amount spent.</li>
+                <li style="margin-top: 10px;">Opens a cursor to fetch the transaction date and customer ID from the
+                    inserted
+                    rows.</li>
+                <li style="margin-top: 10px;">Loops through each inserted row and performs the following actions.</li>
+                <li style="margin-top: 10px;">Retrieves the customer’s current rank from the “Customer” table. </li>
+                <li style="margin-top: 10px;">Retrieves the name of the current rank from the “Membership” table based
+                    on
+                    the current rank ID.</li>
+                <li style="margin-top: 10px;">Calculates the total amount spent by the customer from the “Transaction”
+                    table.</li>
+                <li style="margin-top: 10px;">If the customer is not already at the highest rank. which is Diamond
+                    level, it
+                    sets the ‘next rank’ column to be the current rank + 1, retrieves the minimum amount needed to reach
+                    the
+                    next rank from the “Membership” table, and checks if the customer’s total spending is greater than
+                    or
+                    equal to that amount.</li>
+                <li style="margin-top: 10px;">If the customer has reached the next rank, updates their current rank in
+                    the
+                    “Customer” table, sets the next rank after the update, and inserts a new row into the “Point
+                    balance”
+                    table with the customer’s ID, the transaction date, the total spending, and the next rank after the
+                    update.</li>
+                <li style="margin-top: 10px;">If the customer has not reached the next rank, inserts a new row into the
+                    “Point balance” table with the customer’s ID, the transaction date, the total spending, and the next
+                    rank they could achieve.</li>
+                <li style="margin-top: 10px;">If the customer is already at the highest rank, inserts a new row into the
+                    “Point balance” table with the customer’s ID, the transaction date, the total spending, and a NULL
+                    value
+                    for the next rank. </li>
+                <li style="margin-top: 10px;">Closes the cursor and deallocates it.</li>
+            </ol>
+            <p>Overall, this trigger is designed to automatically update a customer’s rank and point balance based on
+                their transaction history. </p>
+            <img src="https://haodang02.files.wordpress.com/2023/04/4-2.png" alt="">
+        </div>
+
+        <div class="conclusion">
+            <h1>Conclusion</h1>
+            <p>The project has taken us through the entire process of designing an operational database. We began by
+                creating an Entity Relationship Diagram during the Conceptual Modelling phase, which captured all the
+                business requirements of the clients. We then moved on to the Logical Modelling phase where we converted
+                the ERD into a normalized relational database that adheres to the rules of Third Normal Form.
+                Additionally, we also created a SQL trigger to automatically accumulate points and manage membership
+                rankings for customers with each inserted transaction. The last step in the process of database design
+                is the Physical Modelling phase, which focuses on the performance and ACID properties of the database.
+                As this step requires technical expertise, it is beyond the scope of this small project. Nevertheless,
+                this project has provided an opportunity to learn many new things about database design. Based on these
+                accomplishments, it is clear that the project has been successful in teaching valuable skills in
+                database design.</p>
+        </div>
+
+
+    </div>
+    <div class="container show-case projects">
+        <div class="project">
+            <div class="information">
+                <ul>
+                    <li><i class='bx bxs-user'></i>Hieu Keen</li>
+                    <li><i class='bx bxs-calendar'></i> <a href="">April 9, 2023</a></li>
+                    <li><i class='bx bx-purchase-tag-alt'></i> <a href="index.html">Uncategorized</a></li>
+                    <li><i class='bx bx-file'></i> <a href="">ERD</a>, <a href="">Normalization</a>, <a href="">SQL</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="Assets/Library/bootstrap/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="Assets/JS/aboutProject2.js"></script>
+    <script></script>
+</body>
+
+</html>

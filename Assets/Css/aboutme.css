@@ -1,0 +1,69 @@
+.about-me {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    /* set left and right margins to "auto" */
+    width: 70%;
+    margin-top: 50px;
+}
+
+.information-about {
+    display: flex;
+    margin-top: 50px;
+}
+
+.information-about img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.information.name-description {
+    padding: 30px;
+    line-height: 30px;
+}
+
+.information.name-description .connect {
+    font-weight: bold;
+}
+
+
+.information.name-description ul li i{
+    font-size: 40px;
+    display: block;
+}
+
+.information.name-description ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.information.name-description ul li i:hover {
+    font-size: 45px;
+    transition: 0.5s;
+}   
+
+
+@media only screen and (max-width: 500px) {
+    .information-about {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .navbar-toggler {
+        flex-wrap: nowrap;
+        display: block;
+        font-size: 10px;
+    }
+    .information-about img {
+        width: 400px;
+        margin: 0 auto;
+        /* set left and right margins to "auto" */
+        width: 100%;
+    }
+
+    .information.name-description {
+        margin-left: -33px;
+        font-size: 15px;
+    }
+}
